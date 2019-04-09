@@ -6,7 +6,7 @@ Kiểm thử tự động trang web https://hoclieu.sachmem.vn bằng công cụ
 - 2--val_gbt_HL_GBT_21.js
 - 3--val_gbt_HL_GBT_26.js
 - 4--val_gbt_HL_GBT_27.js
--- 5--val_gbt_HL_GBT_28.js
+- 5--val_gbt_HL_GBT_28.js
 - 6--val_gbt_HL_GBT_45.js
 - 7--val_gbt_HL_GBT_47.js
 - 8--val_gbt_HL_GBT_50.js
