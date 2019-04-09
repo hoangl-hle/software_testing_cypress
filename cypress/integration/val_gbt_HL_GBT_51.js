@@ -11,7 +11,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 
 // afterEach(function() { // runs after each test in the block
 describe('Kiểm thử chức năng giao bài tập', function() {
-  context('Kiểm thử  thử HL-GBT_41', function(){
+  context('Kiểm thử  thử HL-GBT_51', function(){
     before(function(){
       cy.log('I run once time for every testcase !!!!!!')
       const timeWaitToLoadPage = 6000
@@ -43,7 +43,7 @@ describe('Kiểm thử chức năng giao bài tập', function() {
       cy.log('Kiểm thử tính hợp lệ của box giờ')
     })
   
-    it('Test case 1 - Truncate bớt số chữ số đằng sau khi nhập số có hơn 2 chữ số', function(){
+    it('HL-GBT_51 - 1 - Truncate bớt số chữ số đằng sau khi nhập số có hơn 2 chữ số', function(){
 
       // Điền vào textbox số lần làm bài kí tự là chữ -> expect: không cho phép - không cho nhập được chữ 
       cy.get(':nth-child(2) > div.form-group > .ng-untouched > table > tbody > :nth-child(2) > :nth-child(1) > .form-control').clear()
@@ -59,7 +59,7 @@ describe('Kiểm thử chức năng giao bài tập', function() {
       cy.get('.toast-success').should('not.exist')
     })
 
-    it('Test case 2 - Nhập chữ vào ô giờ', function(){
+    it('HL-GBT_51 - 2 - Nhập chữ vào ô giờ', function(){
 
       // Điền vào textbox số lần làm bài kí tự là chữ -> expect: không cho phép - không cho nhập được chữ 
       cy.get(':nth-child(2) > div.form-group > .ng-untouched > table > tbody > :nth-child(2) > :nth-child(1) > .form-control').clear()
@@ -67,7 +67,7 @@ describe('Kiểm thử chức năng giao bài tập', function() {
       cy.get('form.ng-untouched > .modal-footer > .btn-primary').click()
       cy.get(':nth-child(2) > .error-text').should('exist')
     })
-    it('Test case 3 - Nhập số âm', function(){
+    it('HL-GBT_51 - 3 - Nhập số âm', function(){
 
       // Điền vào textbox số lần làm bài kí tự là chữ -> expect: không cho phép - không cho nhập được chữ 
       cy.get(':nth-child(2) > div.form-group > .ng-untouched > table > tbody > :nth-child(2) > :nth-child(1) > .form-control').clear()
@@ -76,7 +76,7 @@ describe('Kiểm thử chức năng giao bài tập', function() {
       cy.get(':nth-child(2) > .error-text').should('exist')
     })
 
-    it('Test case 4 - Nhập số vượt quá 24h vào ô giờ',function(){
+    it('HL-GBT_51 - Nhập số vượt quá 24h vào ô giờ',function(){
       cy.get(':nth-child(2) > div.form-group > .ng-untouched > table > tbody > :nth-child(2) > :nth-child(1) > .form-control').clear()
       .type('2500')
       cy.get('form.ng-untouched > .modal-footer > .btn-primary').click()
