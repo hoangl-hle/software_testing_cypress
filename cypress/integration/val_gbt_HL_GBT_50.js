@@ -48,7 +48,14 @@ context('Kiểm thử  thử HL-GBT_50', function(){
     // cy.log('Asia time: '+asiaTime.toLocaleString())
     // var current_date = asiaTime.toLocaleString().split(',');
     // cy.log(cy.log);
+    /*
+    cy.get(':nth-child(3) > .ng-select > .ng-select-container > .ng-arrow-wrapper').click()
+    //Một số nút mã query đựoc sinh ra ngẫu nhiên mẫu lần chọn thì không dùng cy.get(...) đuợc
+    // thì có thể dungf cy.contain('..') để thay thế như truờng chọn lớp học duới dây
+    //cy.get('#a9d74ecc3ce1') -> mã này sẽ thay đổi mỗi lần load trang nên không dùng cách này đựoc
+    //cy.contains('asdfasdf').click()
 
+    */
     //cy.get('.row > :nth-child(1) > .form-control').clear().type('1')
     cy.get('.row > :nth-child(1) > .form-control').clear().type('10/04/1998')
     cy.get(':nth-child(7) > .form-control').click()

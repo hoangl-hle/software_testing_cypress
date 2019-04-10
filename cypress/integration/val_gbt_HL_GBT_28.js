@@ -41,7 +41,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
         var i
         for (i=58; i<= 64; ++i){
             cy.log('--------Kí tự '+ i  + 'trong bảng mã ASCII ứng với' + String.fromCharCode(i))
-            cy.get(':nth-child(7) > .form-control').type(String.fromCharCode(i)).clear().click().should('have.value', '')
+            cy.get(':nth-child(7) > .form-control').clear().type(String.fromCharCode(i)).click().should('have.value', '')
             cy.wait(2000)
         }
       })
@@ -50,7 +50,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
         var i
         for (i=91; i<= 96; ++i){
             cy.log('--------Kí tự '+ i  + 'trong bảng mã ASCII ứng với' + String.fromCharCode(i))
-            cy.get(':nth-child(7) > .form-control').type(String.fromCharCode(i)).clear().click().should('have.value', '')
+            cy.get(':nth-child(7) > .form-control').clear().type(String.fromCharCode(i)).click().should('have.value', '')
             cy.wait(2000)
         }
       })
@@ -59,7 +59,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
         var i
         for (i=123; i<= 126; ++i){
             cy.log('--------Kí tự '+ i  + 'trong bảng mã ASCII ứng với' + String.fromCharCode(i))
-            cy.get(':nth-child(7) > .form-control').type(String.fromCharCode(i)).clear().click().should('have.value', '')
+            cy.get(':nth-child(7) > .form-control').clear().type(String.fromCharCode(i)).click().should('have.value', '')
             cy.wait(2000)
         }
       })

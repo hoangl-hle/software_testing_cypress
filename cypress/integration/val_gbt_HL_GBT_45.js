@@ -40,17 +40,17 @@ context('Kiểm thử HL-GBT_45', function(){
       var i
       for (i=65; i<= 90; ++i){
           cy.log('--------Kí tự '+ i  + 'trong bảng mã ASCII ứng với' + String.fromCharCode(i))
-          cy.get(':nth-child(7) > .form-control').type(String.fromCharCode(i)).clear().click().should('have.value', '')
+          cy.get(':nth-child(7) > .form-control').clear().type(String.fromCharCode(i)).click().should('have.value', '')
           cy.wait(2000)
       }
     })
-    it('HL-GBT_45 - 2: Nhập vào ô số lần làm bài', function(){
-      var i
-      for (i=97; i<= 122; ++i){
-          cy.log('--------Kí tự '+ i  + 'trong bảng mã ASCII ứng với' + String.fromCharCode(i))
-          cy.get(':nth-child(7) > .form-control').type(String.fromCharCode(i)).clear().click().should('have.value', '')
-          cy.wait(2000)
-      }
-    })
+  it('HL-GBT_45 - 2: Nhập vào ô số lần làm bài', function(){
+    var i
+    for (i=97; i<= 122; ++i){
+        cy.log('--------Kí tự '+ i  + 'trong bảng mã ASCII ứng với' + String.fromCharCode(i))
+        cy.get(':nth-child(7) > .form-control').clear().type(String.fromCharCode(i)).click().should('have.value', '')
+        cy.wait(2000)
+    }
+  })
 })
 });
