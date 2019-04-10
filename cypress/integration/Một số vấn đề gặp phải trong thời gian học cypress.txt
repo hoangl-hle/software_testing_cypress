@@ -1,0 +1,28 @@
+Một số vấn đề gặp phải trong quá trình làm:
+    /*
+    //cy.get(':nth-child(3) > .ng-select > .ng-select-container > .ng-arrow-wrapper').click()
+    //Một số nút mã query đựoc sinh ra ngẫu nhiên mẫu lần chọn thì không dùng cy.get(...) đuợc
+    //thì có thể dung cy.contain('..') để thay thế như trong trường hợp chọn lớp học để giao bài tập duới dây
+    //cy.get('#a9d74ecc3ce1') -> mã này sẽ thay đổi mỗi lần load trang nên không dùng cách này đựoc
+    //cy.contains('asdfasdf').click()
+
+    */
+
+    /*
+        lỗi logic đặt clear() sau type() 
+        Đúng: -> đặt clear() trước type()
+    */
+
+    /* 
+        Để đăng nhập đuợc cần sửa file cypess.json đoạn code duới đây 
+        {
+            "chromeWebSecurity": false
+        }
+        và thêm 
+        Cypress.on('uncaught:exception', (err, runnable) => {
+            // returning false here prevents Cypress from
+            // failing the test
+            return false
+        })
+        trong mỗi file js để test
+    */
